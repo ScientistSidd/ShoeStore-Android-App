@@ -6,7 +6,6 @@ apply plugin: "androidx.navigation.safeargs"
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "29.0.1"
     defaultConfig {
         applicationId "com.udacity.shoestore"
         minSdkVersion 22
@@ -31,11 +30,13 @@ android {
 
     //turn on data binding
     buildFeatures{
-        databinding true
+        dataBinding true
     }
 }
 
 dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
 
     //defining nav version
     def nav_version = "2.3.5"
